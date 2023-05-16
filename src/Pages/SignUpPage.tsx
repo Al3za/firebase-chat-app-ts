@@ -17,11 +17,8 @@ const SignUpPage = () => {
 
         createUserWithEmailAndPassword(auth, email, password )
             .then(res => {
-                // remove this log when u deploy this app
-               // console.log(res.user.displayName)
                 navigate('/')
             }).catch((err) => {
-                console.log(err)
                 alert(err.code)
                 setAuthin(false)
             })

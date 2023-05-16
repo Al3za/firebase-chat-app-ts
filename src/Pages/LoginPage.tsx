@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { browserSessionPersistence, getAuth, setPersistence, signInWithEmailAndPassword } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom';
-import { doc, setDoc } from '@firebase/firestore';
-//import { db } from '../App';
 
 
 
