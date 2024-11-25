@@ -1,10 +1,26 @@
-export const config = {
-     firebaseConfig : {
-        apiKey: "AIzaSyDVM5NkcTdu4qlMK-eoTfoEf0LMCd7y0bw",
-        authDomain: "typescrypt-backend3.firebaseapp.com",
-        projectId: "typescrypt-backend3",
-        storageBucket: "typescrypt-backend3.appspot.com",
-        messagingSenderId: "454895339056",
-        appId: "1:454895339056:web:30dd3525bae8f76f0d4ff5"
-    }
+
+export const secondaryAppConfig = {
+    apiKey:process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTHDOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID, 
+    storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGINDSENDERID,
+    appId: process.env.REACT_APP_APPID 
+
 };
+
+
+
+// matching rules(Chats)
+
+// service cloud.firestore {
+//     match /databases/{database}/documents {
+  
+//       match /Chats/{ChatsID}/children/{childrenID} {
+//         allow read, write: if request.auth != null;
+//       }
+//       match /prova/{provaID}/children/{childrenID} {
+//         allow read;
+//       }
+//     }
+//   }
